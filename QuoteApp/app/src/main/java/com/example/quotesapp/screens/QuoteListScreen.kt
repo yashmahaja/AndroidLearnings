@@ -1,7 +1,6 @@
 package com.example.quotesapp.screens
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -13,7 +12,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.quotesapp.models.Quote
 
@@ -21,7 +19,6 @@ import com.example.quotesapp.models.Quote
 @Composable
 fun QuoteListScreen(data:  Array<Quote>, onClick: (quote:Quote) -> Unit){
     Column(){
-        Box{
             Card( shape = RectangleShape, modifier = Modifier
                 .fillMaxWidth()
                 .background(Color.LightGray)
@@ -31,9 +28,7 @@ fun QuoteListScreen(data:  Array<Quote>, onClick: (quote:Quote) -> Unit){
                     modifier = Modifier
                         .padding(8.dp, 24.dp)
                         .fillMaxWidth(1f),
-                    style = MaterialTheme.typography.headlineMedium)
-            }
-        }
+                    style = MaterialTheme.typography.headlineMedium) }
         QuoteList(data = data,onClick)
     }
 }

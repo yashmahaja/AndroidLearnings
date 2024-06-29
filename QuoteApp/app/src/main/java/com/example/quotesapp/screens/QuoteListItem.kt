@@ -24,12 +24,14 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.quotesapp.models.Quote
 
 
 @Composable
 fun QuoteListItem(quote:Quote, onClick: (quote:Quote) -> Unit){
+
     Card(
         elevation =  CardDefaults.cardElevation(4.dp),
         modifier = Modifier
@@ -54,7 +56,7 @@ fun QuoteListItem(quote:Quote, onClick: (quote:Quote) -> Unit){
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(0.dp,0.dp,0.dp,8.dp))
                 Box(modifier = Modifier
-                    .background(Color(0xFFEEEEEE))
+                    .background(Color.LightGray)
                     .fillMaxWidth(.4f)
                     .height(1.dp))
 
